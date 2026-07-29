@@ -6,13 +6,13 @@ headers = {
     "User-Agent": "Mozilla/5.0"
 }
 
-try:
-    r = requests.get(url, headers=headers, timeout=30)
+r = requests.get(url, headers=headers, timeout=30)
 
-    print("Status:", r.status_code)
+print("Status:", r.status_code)
+print("Final URL:", r.url)
+print("Content-Type:", r.headers.get("content-type"))
 
-    with open("page.html", "w", encoding="utf-8") as f:
-        f.write(r.text)
+with open("page.html", "w", encoding="utf-8") as f:
+    f.write(r.text)
 
-except Exception as e:
-    print(e)
+print("Saved page.html")
