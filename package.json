@@ -1,0 +1,12 @@
+{
+  "name": "hstu-notice",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "update": "node scraper.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0"
+  }
+}
