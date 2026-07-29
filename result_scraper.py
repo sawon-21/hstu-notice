@@ -21,3 +21,9 @@ with open("results.json", "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
 
 print("results.json created.")
+
+with open("exam_result.html", "w", encoding="utf-8") as f:
+    f.write(response.text)
+
+print(response.status_code)
+print(len(response.text))
