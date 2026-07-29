@@ -16,16 +16,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version: 20
+          python-version: "3.12"
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Python packages
+        run: pip install -r requirements.txt
 
       - name: Run scraper
-        run: npm run update
+        run: python scraper.py
 
       - name: Commit changes
         run: |
