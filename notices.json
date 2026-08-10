@@ -1,7 +1,21 @@
 {
-  "updated": "2026-08-10T05:54:50.763104",
-  "total": 4031,
+  "updated": "2026-08-10T07:38:31.383114",
+  "total": 4033,
   "notices": [
+    {
+      "title": "B.Sc in ECE L4 S2 2024 Prac. Routine",
+      "date": "10Aug 2026",
+      "department": "B.Sc in ECE L4 S2 2024 Prac. Routine",
+      "category": "General",
+      "url": "https://srps.hstu.ac.bd/upload_routine/1204.pdf"
+    },
+    {
+      "title": "BSS in Economics L1 S2 2025 Routine",
+      "date": "10Aug 2026",
+      "department": "BSS in Economics L1 S2 2025 Routine",
+      "category": "General",
+      "url": "https://srps.hstu.ac.bd/upload_routine/1203.pdf"
+    },
     {
       "title": "B.Sc in Ag. Engg. L3 S1 2025 Prac. Routine",
       "date": "10Aug 2026",
@@ -780,18 +794,18 @@
       "url": "https://srps.hstu.ac.bd/upload_routine/1115.pdf"
     },
     {
-      "title": "বিশ্ববিদ্যালয়ের কর্মচারীদের দায়িত্ব পালন সংক্রান্ত জরুরি নোটিশ",
-      "date": "18Jun 2026",
-      "department": "বিশ্ববিদ্যালয়ের কর্মচারীদের দায়িত্ব পালন সংক্রান্ত জরুরি নোটিশ",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2026/june/office-Notice.pdf"
-    },
-    {
       "title": "আবাসন সম্পর্কিত বিজ্ঞপ্তি",
       "date": "18Jun 2026",
       "department": "আবাসন সম্পর্কিত বিজ্ঞপ্তি",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2026/june/Home-Notice-hstu.pdf"
+    },
+    {
+      "title": "বিশ্ববিদ্যালয়ের কর্মচারীদের দায়িত্ব পালন সংক্রান্ত জরুরি নোটিশ",
+      "date": "18Jun 2026",
+      "department": "বিশ্ববিদ্যালয়ের কর্মচারীদের দায়িত্ব পালন সংক্রান্ত জরুরি নোটিশ",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2026/june/office-Notice.pdf"
     },
     {
       "title": "B.Arch. L5 S2 2022 Special Short Prac. Routine",
@@ -1690,11 +1704,11 @@
       "url": "https://srps.hstu.ac.bd/upload_routine/1037.pdf"
     },
     {
-      "title": "বিজ্ঞপ্তি: ৯.০০ টা থেকে ৯.৪০ মিনিট পর্যন্ত আবশ্যিকভাবে নিজ অফিস কক্ষে অবস্থান প্রসঙ্গে",
+      "title": "ICSETEP প্রকল্পের অধীনে গবেষণা উপ-প্রকল্পে অস্থায়ী জনবল নিয়োগ বিজ্ঞপ্তি",
       "date": "05Mar 2026",
-      "department": "বিজ্ঞপ্তি: ৯.০০ টা থেকে ৯.৪০ মিনিট পর্যন্ত আবশ্যিকভাবে নিজ অফিস কক্ষে অবস্থান প্রসঙ্গে",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2026/march/office_notice_05_03_2026.pdf"
+      "department": "ICSETEP প্রকল্পের অধীনে গবেষণা উপ-প্রকল্পে অস্থায়ী জনবল নিয়োগ বিজ্ঞপ্তি",
+      "category": "CSE",
+      "url": "https://hstu.ac.bd/uploads/notice/2026/march/ICSETEP.pdf"
     },
     {
       "title": "বিজ্ঞপ্তি: হাবিপ্রবি পিএইচডি ফেলোশিপ-২০২৬ এর জন্য দরখাস্ত আহ্বান এর সময় বর্ধিতকরণ",
@@ -1704,11 +1718,11 @@
       "url": "https://hstu.ac.bd/uploads/notice/2026/march/Institute of Research and Training.pdf"
     },
     {
-      "title": "ICSETEP প্রকল্পের অধীনে গবেষণা উপ-প্রকল্পে অস্থায়ী জনবল নিয়োগ বিজ্ঞপ্তি",
+      "title": "বিজ্ঞপ্তি: ৯.০০ টা থেকে ৯.৪০ মিনিট পর্যন্ত আবশ্যিকভাবে নিজ অফিস কক্ষে অবস্থান প্রসঙ্গে",
       "date": "05Mar 2026",
-      "department": "ICSETEP প্রকল্পের অধীনে গবেষণা উপ-প্রকল্পে অস্থায়ী জনবল নিয়োগ বিজ্ঞপ্তি",
-      "category": "CSE",
-      "url": "https://hstu.ac.bd/uploads/notice/2026/march/ICSETEP.pdf"
+      "department": "বিজ্ঞপ্তি: ৯.০০ টা থেকে ৯.৪০ মিনিট পর্যন্ত আবশ্যিকভাবে নিজ অফিস কক্ষে অবস্থান প্রসঙ্গে",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2026/march/office_notice_05_03_2026.pdf"
     },
     {
       "title": "মহান স্বাধীনতা ও জাতীয় দিবস ২০২৬ উপলক্ষ্যে হাবিপ্রবি কর্তৃক গৃহিত কর্মসূচি সমূহ",
@@ -1858,18 +1872,18 @@
       "url": "https://srps.hstu.ac.bd/upload_routine/1023.pdf"
     },
     {
-      "title": "বার্ষিক ক্রীড়া প্রতিযোগিত-২০২৬ সম্পর্কিত বিজ্ঞপ্তি",
-      "date": "22Feb 2026",
-      "department": "বার্ষিক ক্রীড়া প্রতিযোগিত-২০২৬ সম্পর্কিত বিজ্ঞপ্তি",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/news/annual_sport_23_02_26.pdf"
-    },
-    {
       "title": "আবাসন সম্পর্কিত বিজ্ঞপ্তি",
       "date": "22Feb 2026",
       "department": "আবাসন সম্পর্কিত বিজ্ঞপ্তি",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2026/feb/আবাসন কমিটি-বিজ্ঞপ্তি-১২১.pdf"
+    },
+    {
+      "title": "বার্ষিক ক্রীড়া প্রতিযোগিত-২০২৬ সম্পর্কিত বিজ্ঞপ্তি",
+      "date": "22Feb 2026",
+      "department": "বার্ষিক ক্রীড়া প্রতিযোগিত-২০২৬ সম্পর্কিত বিজ্ঞপ্তি",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/news/annual_sport_23_02_26.pdf"
     },
     {
       "title": "BSS in Sociology L4 S1 2024 Routine",
@@ -2278,18 +2292,18 @@
       "url": "https://hstu.ac.bd/uploads/admission_2026/admission-notice-11-1-26.pdf"
     },
     {
-      "title": "সাবেক প্রধানমন্ত্রী বেগম খালেদা জিয়ার বিদেহী আত্মার মাগফিরাত কামনায় দোয়া মাহফিল ১২/০১/২০২৬ খ্রি. তারিখে অনুষ্ঠিত হবে।",
-      "date": "11Jan 2026",
-      "department": "সাবেক প্রধানমন্ত্রী ও বিএনপি চেয়ারপার্সন বেগম খালেদা জিয়ার বিদেহী আত্মার মাগফিরাত কামনায় দোয়া মাহফিল ১২/০১/২০২৬ খ্রি. তারিখে অনুষ্ঠিত হবে।",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2026/begum-khaleda-zia-doa-mahfil.pdf"
-    },
-    {
       "title": "Admission Notice: M.S. in Fisheries Technology",
       "date": "11Jan 2026",
       "department": "Admission Notice: M.S. in Fisheries Technology",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2026/jan/ms_f_technology.pdf"
+    },
+    {
+      "title": "সাবেক প্রধানমন্ত্রী বেগম খালেদা জিয়ার বিদেহী আত্মার মাগফিরাত কামনায় দোয়া মাহফিল ১২/০১/২০২৬ খ্রি. তারিখে অনুষ্ঠিত হবে।",
+      "date": "11Jan 2026",
+      "department": "সাবেক প্রধানমন্ত্রী ও বিএনপি চেয়ারপার্সন বেগম খালেদা জিয়ার বিদেহী আত্মার মাগফিরাত কামনায় দোয়া মাহফিল ১২/০১/২০২৬ খ্রি. তারিখে অনুষ্ঠিত হবে।",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2026/begum-khaleda-zia-doa-mahfil.pdf"
     },
     {
       "title": "B.Sc in Civil Engg. L2 S2 2024 Routine",
@@ -3414,16 +3428,16 @@
     {
       "title": "আইকিউএসি, হাবিপ্রবি কর্তৃক আয়োজিত ‘Outcome based Education(OBE) Curriculum’ শীর্ষক দিনব্যাপী প্রশিক্ষণে অংশগ্রহন প্রসঙ্গে",
       "date": "09Nov 2025",
-      "department": "আইকিউএসি, হাবিপ্রবি কর্তৃক আয়োজিত ‘Outcome based Education(OBE) Curriculum’ শীর্ষক দিনব্যাপী প্রশিক্ষণে অংশগ্রহন প্রসঙ্গে(তারিখঃ ১২/১১/২০২৫)",
+      "department": "আইকিউএসি, হাবিপ্রবি কর্তৃক আয়োজিত ‘Outcome based Education(OBE) Curriculum’ শীর্ষক দিনব্যাপী প্রশিক্ষণে অংশগ্রহন প্রসঙ্গে(তারিখঃ ১১/১১/২০২৫)",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2025/nov/IQAC-Notice-2.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2025/nov/IQAC-Notice-1.pdf"
     },
     {
       "title": "আইকিউএসি, হাবিপ্রবি কর্তৃক আয়োজিত ‘Outcome based Education(OBE) Curriculum’ শীর্ষক দিনব্যাপী প্রশিক্ষণে অংশগ্রহন প্রসঙ্গে",
       "date": "09Nov 2025",
-      "department": "আইকিউএসি, হাবিপ্রবি কর্তৃক আয়োজিত ‘Outcome based Education(OBE) Curriculum’ শীর্ষক দিনব্যাপী প্রশিক্ষণে অংশগ্রহন প্রসঙ্গে(তারিখঃ ১১/১১/২০২৫)",
+      "department": "আইকিউএসি, হাবিপ্রবি কর্তৃক আয়োজিত ‘Outcome based Education(OBE) Curriculum’ শীর্ষক দিনব্যাপী প্রশিক্ষণে অংশগ্রহন প্রসঙ্গে(তারিখঃ ১২/১১/২০২৫)",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2025/nov/IQAC-Notice-1.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2025/nov/IQAC-Notice-2.pdf"
     },
     {
       "title": "DVM L5 S1 2025 Routine",
@@ -6268,18 +6282,18 @@
       "url": ""
     },
     {
-      "title": "মহান শহীদ দিবস এবং আন্তর্জাতিক মাতৃভাষা দিবস – ২০২৫ উপলক্ষ্যে হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় কর্তৃক গৃহীত কর্মসূচি সমূহ",
-      "date": "16Feb 2025",
-      "department": "মহান শহীদ দিবস এবং আন্তর্জাতিক মাতৃভাষা দিবস – ২০২৫ উপলক্ষ্যে হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় কর্তৃক গৃহীত কর্মসূচি সমূহ",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2025/int_mother_language_day.pdf"
-    },
-    {
       "title": "RFQ এর মাধ্যমে দরপত্র আহ্ববান",
       "date": "16Feb 2025",
       "department": "RFQ এর মাধ্যমে দরপত্র আহ্ববান",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2025/Hstu-Notice.pdf"
+    },
+    {
+      "title": "মহান শহীদ দিবস এবং আন্তর্জাতিক মাতৃভাষা দিবস – ২০২৫ উপলক্ষ্যে হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় কর্তৃক গৃহীত কর্মসূচি সমূহ",
+      "date": "16Feb 2025",
+      "department": "মহান শহীদ দিবস এবং আন্তর্জাতিক মাতৃভাষা দিবস – ২০২৫ উপলক্ষ্যে হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় কর্তৃক গৃহীত কর্মসূচি সমূহ",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2025/int_mother_language_day.pdf"
     },
     {
       "title": "B.Sc in Civil Engg. L4 S1 2023 Routine",
@@ -6828,18 +6842,18 @@
       "url": "https://hstu.ac.bd/uploads/iqac/iqac_notice_08_12_24.pdf"
     },
     {
-      "title": "হাবিপ্রবি ট্রাস্টিবোর্ড পরিচালনা কমিটি পুনর্গঠন সম্পর্কিত অফিস আদেশ",
-      "date": "08Dec 2024",
-      "department": "হাবিপ্রবি ট্রাস্টিবোর্ড পরিচালনা কমিটি পুনর্গঠন সম্পর্কিত অফিস আদেশ",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2024/dec/trasti_board.pdf"
-    },
-    {
       "title": "শিক্ষার্থীদের বহিষ্কার সম্পর্কিত অফিস আদেশ",
       "date": "08Dec 2024",
       "department": "শিক্ষার্থীদের বহিষ্কার সম্পর্কিত অফিস আদেশ",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2024/dec/suspension_08_12_24.pdf"
+    },
+    {
+      "title": "হাবিপ্রবি ট্রাস্টিবোর্ড পরিচালনা কমিটি পুনর্গঠন সম্পর্কিত অফিস আদেশ",
+      "date": "08Dec 2024",
+      "department": "হাবিপ্রবি ট্রাস্টিবোর্ড পরিচালনা কমিটি পুনর্গঠন সম্পর্কিত অফিস আদেশ",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2024/dec/trasti_board.pdf"
     },
     {
       "title": "B.Sc in FPE L1 S2 2023 Routine",
@@ -7353,18 +7367,11 @@
       "url": "https://hstu.ac.bd/uploads/iqac/workshop18_03_21-merged.pdf"
     },
     {
-      "title": "সুশাসন প্রতিষ্ঠার নিমিত্তে অংশীজনের (Stakehoholders) অংশগ্রহণ\"\" বিষয়ক সভায় সহকারী অধ্যাপকবৃন্দের অংশগ্রহণ প্রসঙ্গে",
+      "title": "Counseling and Motivation for L1SI 2023 Students of HSTU\"\" শীর্ষক সেমিনারে অংশগ্রহণ প্রসঙ্গে",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "http://hstu.ac.bd/uploads/notice/2023/iqac-31-8-23.pdf"
-    },
-    {
-      "title": "৯ম গ্রেড হতে তদূর্ধ্ব গ্রেডের বিভিন্ন পর্যায়ের কর্মকর্তাবৃন্দের শুদ্ধাচার সংক্রান্ত প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
-      "date": "12Nov 2024",
-      "department": "",
-      "category": "General",
-      "url": "http://hstu.ac.bd/uploads/notice/2023/iqac-7-9-23.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2023/iqac_8_10_2023.pdf"
     },
     {
       "title": "IQAC, হাবিপ্রবি কর্তৃক আয়োজিত \"\"University Ranking for the teachers of HSTU\"\" শীর্ষক সেমিনারে অংশগ্রহণ প্রসঙ্গে",
@@ -7374,18 +7381,11 @@
       "url": "http://hstu.ac.bd/uploads/notice/2023/uni-ranking-seminar.pdf"
     },
     {
-      "title": "Counseling and Motivation for L1SI 2023 Students of HSTU\"\" শীর্ষক সেমিনারে অংশগ্রহণ প্রসঙ্গে",
+      "title": "৯ম গ্রেড হতে তদূর্ধ্ব গ্রেডের বিভিন্ন পর্যায়ের কর্মকর্তাবৃন্দের শুদ্ধাচার সংক্রান্ত প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2023/iqac_8_10_2023.pdf"
-    },
-    {
-      "title": "\"\"E-GOvernance and Innovation for Smart Bangladesh\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
-      "date": "12Nov 2024",
-      "department": "",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2023/e-gov-training-12-11-23.pdf"
+      "url": "http://hstu.ac.bd/uploads/notice/2023/iqac-7-9-23.pdf"
     },
     {
       "title": "\"\"Effective Managerial Communication for the Officers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
@@ -7393,6 +7393,20 @@
       "department": "",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2023/training-19-10-23.pdf"
+    },
+    {
+      "title": "সুশাসন প্রতিষ্ঠার নিমিত্তে অংশীজনের (Stakehoholders) অংশগ্রহণ\"\" বিষয়ক সভায় সহকারী অধ্যাপকবৃন্দের অংশগ্রহণ প্রসঙ্গে",
+      "date": "12Nov 2024",
+      "department": "",
+      "category": "General",
+      "url": "http://hstu.ac.bd/uploads/notice/2023/iqac-31-8-23.pdf"
+    },
+    {
+      "title": "\"\"E-GOvernance and Innovation for Smart Bangladesh\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
+      "date": "12Nov 2024",
+      "department": "",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2023/e-gov-training-12-11-23.pdf"
     },
     {
       "title": "Students Result Processing System and Online Enrollment\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
@@ -7437,13 +7451,6 @@
       "url": "https://hstu.ac.bd/uploads/notice/2024/iqac/24-01-2024.IQAC.pdf"
     },
     {
-      "title": "\"\"PYTHON basics (MODULE 1) for the Teachers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে।",
-      "date": "12Nov 2024",
-      "department": "",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2024/iqac/iqac_29-01-2024.pdf"
-    },
-    {
       "title": "Anti Ragging Activities and Academic Counseling for the Students of HSTU\"\" শীর্ষক সেমিনারে অংশগ্রহণ প্রসঙ্গে",
       "date": "12Nov 2024",
       "department": "",
@@ -7451,11 +7458,11 @@
       "url": "http://hstu.ac.bd/uploads/notice/2023/anti-ragging-counseling-iqac.pdf"
     },
     {
-      "title": "IQAC, হাবিপ্রবি কর্তৃক আয়োজিত “বার্ষিক কর্মসম্পাদন চুক্তি ও জাতীয় শুদ্ধাচার কৌশল” এবং “ই-গভর্ন্যাস ও উদ্ভাবন পরিকল্পনা” বিষয়ক দুইটি প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
+      "title": "২/০৬/২০২২ খ্রি.তারিখে Academic & Research Collaboration and MoU Signing Ceremony\"\" শীর্ষক সেমিনারে অংশগ্রহন প্রসঙ্গে",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2022/june/iqac_traning.pdf"
+      "url": "http://hstu.ac.bd/uploads/notice/2022/may/iqac-30-05-2022.pdf"
     },
     {
       "title": "IQAC, হাবিপ্রবি কর্তৃক আয়োজিত ৪র্থ শিল্প বিপ্লবের চ্যালেঞ্জ মোকাবেলায় করণীয় বিষয়ে অবহিতকরণ কর্মশালা সংক্রান্ত",
@@ -7486,11 +7493,11 @@
       "url": "https://hstu.ac.bd/uploads/notice/2022/sept/notice_iqac.pdf"
     },
     {
-      "title": "PYTHON basics (MODULE 1) for the Teachers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে (৩য় গ্রুপ)",
+      "title": "IQAC, হাবিপ্রবি কর্তৃক আয়োজিত “বার্ষিক কর্মসম্পাদন চুক্তি ও জাতীয় শুদ্ধাচার কৌশল” এবং “ই-গভর্ন্যাস ও উদ্ভাবন পরিকল্পনা” বিষয়ক দুইটি প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/iqac/python-training-2.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2022/june/iqac_traning.pdf"
     },
     {
       "title": "০২/০৬/২০২২ খ্রি.তারিখে Academic & Research Collaboration and MoU Signing Ceremony\"\" শীর্ষক সেমিনারে অংশগ্রহন প্রসঙ্গে",
@@ -7500,11 +7507,11 @@
       "url": "http://hstu.ac.bd/uploads/notice/2022/may/iqac-30-05-2022.pdf"
     },
     {
-      "title": "২/০৬/২০২২ খ্রি.তারিখে Academic & Research Collaboration and MoU Signing Ceremony\"\" শীর্ষক সেমিনারে অংশগ্রহন প্রসঙ্গে",
+      "title": "\"\"PYTHON basics (MODULE 1) for the Teachers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে।",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "http://hstu.ac.bd/uploads/notice/2022/may/iqac-30-05-2022.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2024/iqac/IQAC,Notice.Hstu.pdf"
     },
     {
       "title": "Training on \"\"Effective File Management for the Teachers of HSTU\"\" and workshop on \"\"Good Governance for the Teachers of HSTU",
@@ -7560,7 +7567,7 @@
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2024/iqac/IQAC,Notice.Hstu.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2024/iqac/iqac_29-01-2024.pdf"
     },
     {
       "title": "Workshop on \"\"Outcome Based Curricula Finalization and Materialization in HSTU",
@@ -7570,11 +7577,11 @@
       "url": "https://hstu.ac.bd/uploads/iqac/iqac_16_11_2020.pdf"
     },
     {
-      "title": "ইনস্টিটিউশনাল কোয়ালিটি এস্যুরেন্স সেল (IQAC) এর QA Committee এর ১০ম সভা সংক্রান্ত",
+      "title": "PYTHON basics (MODULE 1) for the Teachers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে (৩য় গ্রুপ)",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/iqac/10th-general-meeting.pdf"
+      "url": "https://hstu.ac.bd/uploads/iqac/python-training-2.pdf"
     },
     {
       "title": "Workshop on \"\"Outcome Based Teaching Learning and Class Room Management for the Newly Recruited Teachers of HSTU",
@@ -7584,11 +7591,11 @@
       "url": "https://hstu.ac.bd/uploads/iqac/iqac_16_02_20.pdf"
     },
     {
-      "title": "PYTHON basics (MODULE 2) for the Teachers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে (১ম গ্রুপ)",
+      "title": "ইনস্টিটিউশনাল কোয়ালিটি এস্যুরেন্স সেল (IQAC) এর QA Committee এর ১০ম সভা সংক্রান্ত",
       "date": "12Nov 2024",
       "department": "",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/iqac/python-training-module-2.pdf"
+      "url": "https://hstu.ac.bd/uploads/iqac/10th-general-meeting.pdf"
     },
     {
       "title": "Orientation and Training for Newly Recruited Teachers, Officers and Stuffs of HSTU",
@@ -7619,6 +7626,13 @@
       "url": "https://hstu.ac.bd/uploads/iqac/iqac_29_09_2019.pdf"
     },
     {
+      "title": "IQAC is organizing Sminar on \"\"Clean and Safe Campus\"\" on 02/10/2019.",
+      "date": "12Nov 2024",
+      "department": "",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/iqac/iqac_29_09_2019.pdf"
+    },
+    {
       "title": "উচ্চ শিক্ষার গুণগত মানোন্নয়নে আইকিউএসি” শীর্ষক সেমিনার",
       "date": "12Nov 2024",
       "department": "",
@@ -7631,13 +7645,6 @@
       "department": "",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/iqac/iqac_16_01_2020.pdf"
-    },
-    {
-      "title": "IQAC is organizing Sminar on \"\"Clean and Safe Campus\"\" on 02/10/2019.",
-      "date": "12Nov 2024",
-      "department": "",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/iqac/iqac_29_09_2019.pdf"
     },
     {
       "title": "Statistical Analysis with R” শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে (৬-৭ জুন, ২০২৪)",
@@ -7694,6 +7701,13 @@
       "department": "",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/iqac/d-nothi-training.pdf"
+    },
+    {
+      "title": "PYTHON basics (MODULE 2) for the Teachers of HSTU\"\" শীর্ষক প্রশিক্ষণে অংশগ্রহণ প্রসঙ্গে (১ম গ্রুপ)",
+      "date": "12Nov 2024",
+      "department": "",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/iqac/python-training-module-2.pdf"
     },
     {
       "title": "আইকিউএসি কর্তৃক আয়োজিত \"Basic Programming with MATLAB\" শীর্ষক দুইদিন ব্যাপী প্রশিক্ষণের অংশগ্রহণকারীদের নাম অবহিতকরণ প্রসঙ্গে",
@@ -9642,18 +9656,18 @@
       "url": "http://hstu.ac.bd/uploads/notice/2024/april/notice_2024.pdf"
     },
     {
-      "title": "প্রধানমন্ত্রীর শিক্ষা সহায়তা ট্রাস্টের আওতায় পিএইচ.ডি. ফেলোশিপ ও বৃত্তি প্রদান-২০২৪ এর বিজ্ঞপ্তি",
-      "date": "23Apr 2024",
-      "department": "প্রধানমন্ত্রীর শিক্ষা সহায়তা ট্রাস্টের আওতায় পিএইচ.ডি. ফেলোশিপ ও বৃত্তি প্রদান-২০২৪ এর বিজ্ঞপ্তি",
-      "category": "General",
-      "url": "http://hstu.ac.bd/uploads/notice/2024/april/feloship_2024.pdf"
-    },
-    {
       "title": "CADS এর ব্যবস্থাপনায় এ বিশ্ববিদ্যালয়ের ভেটেরিনারী  এন্ড এনিমেল সায়েন্স অনুষদের শিক্ষার্থীদের জন্য \"workshop Training on Development of professional Skills\" শীর্ষক কর্মশালা সংক্রান্ত বিজ্ঞপ্তি",
       "date": "23Apr 2024",
       "department": "CADS এর ব্যবস্থাপনায় এ বিশ্ববিদ্যালয়ের ভেটেরিনারী  এন্ড এনিমেল সায়েন্স অনুষদের শিক্ষার্থীদের জন্য \"workshop Training on Development of professional Skills\" শীর্ষক কর্মশালা সংক্রান্ত বিজ্ঞপ্তি",
       "category": "General",
       "url": "http://hstu.ac.bd/uploads/notice/2024/april/hstu.notice_cads.pdf"
+    },
+    {
+      "title": "প্রধানমন্ত্রীর শিক্ষা সহায়তা ট্রাস্টের আওতায় পিএইচ.ডি. ফেলোশিপ ও বৃত্তি প্রদান-২০২৪ এর বিজ্ঞপ্তি",
+      "date": "23Apr 2024",
+      "department": "প্রধানমন্ত্রীর শিক্ষা সহায়তা ট্রাস্টের আওতায় পিএইচ.ডি. ফেলোশিপ ও বৃত্তি প্রদান-২০২৪ এর বিজ্ঞপ্তি",
+      "category": "General",
+      "url": "http://hstu.ac.bd/uploads/notice/2024/april/feloship_2024.pdf"
     },
     {
       "title": "B.Sc. (Hons.) in Statistics Level 3 Semester II Theoretical Exam Schedule 2022",
@@ -9768,18 +9782,18 @@
       "url": "https://hstu.ac.bd/uploads/notice/2024/std-ad.-Notice.pdf"
     },
     {
-      "title": "সংশোধিত বিজ্ঞপ্তিঃ মহান স্বাধীনতা ও জাতীয় দিবস-২০২৪ উপলক্ষ্যে হাবিপ্রবি কর্তৃক গৃহিত কর্মসূচি সমূহ",
-      "date": "25Mar 2024",
-      "department": "সংশোধিত বিজ্ঞপ্তিঃ মহান স্বাধীনতা ও জাতীয় দিবস-২০২৪ উপলক্ষ্যে হাবিপ্রবি কর্তৃক গৃহিত কর্মসূচি সমূহ",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2024/update_26_march.pdf"
-    },
-    {
       "title": "\"সেবা প্রদান প্রতিশ্রুতি\" বিষয়ক একটি সেমিনার সম্পর্কিত বিজ্ঞপ্তি",
       "date": "25Mar 2024",
       "department": "\"সেবা প্রদান প্রতিশ্রুতি\" বিষয়ক একটি সেমিনার সম্পর্কিত বিজ্ঞপ্তি",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2024/hstu.notice_vip.pdf"
+    },
+    {
+      "title": "সংশোধিত বিজ্ঞপ্তিঃ মহান স্বাধীনতা ও জাতীয় দিবস-২০২৪ উপলক্ষ্যে হাবিপ্রবি কর্তৃক গৃহিত কর্মসূচি সমূহ",
+      "date": "25Mar 2024",
+      "department": "সংশোধিত বিজ্ঞপ্তিঃ মহান স্বাধীনতা ও জাতীয় দিবস-২০২৪ উপলক্ষ্যে হাবিপ্রবি কর্তৃক গৃহিত কর্মসূচি সমূহ",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2024/update_26_march.pdf"
     },
     {
       "title": "স্থাপত্য বিভাগের শিক্ষার্থীদের কর্তৃক “পুনরুজ্জীবন” শীর্ষক দিনব্যাপী প্রদর্শনী সম্পর্কিত বিজ্ঞপ্তি",
@@ -11301,18 +11315,18 @@
       "url": "https://srps.hstu.ac.bd/upload_routine/214.pdf"
     },
     {
-      "title": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ এর চুড়ান্ত পর্বের প্রতিযোগিতা ও পুরষ্কার বিতরণী অনুষ্ঠানের সময় সূচি সংক্রান্ত বিজ্ঞপ্তি",
-      "date": "11Dec 2023",
-      "department": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ এর চুড়ান্ত পর্বের প্রতিযোগিতা ও পুরষ্কার বিতরণী অনুষ্ঠানের সময় সূচি সংক্রান্ত বিজ্ঞপ্তি",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2023/hstu.notice.pdf"
-    },
-    {
       "title": "বার্ষিক কর্মসম্পাদন চুক্তি ২০২৩-২৪ এর লক্ষ্যমাত্রার বিপরীতে অগ্রগতির প্রতিবেদন প্রস্তুতকরনের লক্ষ্যে তথ্য প্রেরণ প্রসঙ্গে",
       "date": "11Dec 2023",
       "department": "বার্ষিক কর্মসম্পাদন চুক্তি ২০২৩-২৪ এর লক্ষ্যমাত্রার বিপরীতে অগ্রগতির প্রতিবেদন প্রস্তুতকরনের লক্ষ্যে তথ্য প্রেরণ প্রসঙ্গে",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/apams/apa/apa-2023-2024-1st-quarter-report2.pdf\n"
+    },
+    {
+      "title": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ এর চুড়ান্ত পর্বের প্রতিযোগিতা ও পুরষ্কার বিতরণী অনুষ্ঠানের সময় সূচি সংক্রান্ত বিজ্ঞপ্তি",
+      "date": "11Dec 2023",
+      "department": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ এর চুড়ান্ত পর্বের প্রতিযোগিতা ও পুরষ্কার বিতরণী অনুষ্ঠানের সময় সূচি সংক্রান্ত বিজ্ঞপ্তি",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2023/hstu.notice.pdf"
     },
     {
       "title": "B.Sc in Fisheries L3 S1 Prac. 2022",
@@ -11455,18 +11469,18 @@
       "url": "http://hstu.ac.bd/uploads/notice/2023/TrustyStipendList.pdf"
     },
     {
-      "title": "জানুয়ারী-জুন/২০২৪ খ্রিঃ সেমিস্টারে এম.এস./এম.এস.এস./এম.এ. কোর্সে ছাত্র-ছাত্রী ভর্তি বিজ্ঞপ্তি (সংশোধিত)",
-      "date": "30Nov 2023",
-      "department": "জানুয়ারী-জুন/২০২৪ খ্রিঃ সেমিস্টারে এম.এস./এম.এস.এস./এম.এ. কোর্সে ছাত্র-ছাত্রী ভর্তি বিজ্ঞপ্তি (সংশোধিত)",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/pgs/B S F.Notice.hstu_revised_2023.pdf"
-    },
-    {
       "title": "\"হাবিপ্রবি ট্রাস্টি বোর্ড\" জানুয়ারি-জুন/২০২৩ সেমিস্টার এর এনরোলমেন্ট-এ আর্থিক সহযোগিতার জন্য নির্বাচিত শিক্ষার্থীদের তালিকা।",
       "date": "30Nov 2023",
       "department": "\"হাবিপ্রবি ট্রাস্টি বোর্ড\" জানুয়ারি-জুন/২০২৩ সেমিস্টার এর এনরোলমেন্ট-এ আর্থিক সহযোগিতার জন্য নির্বাচিত শিক্ষার্থীদের তালিকা।",
       "category": "General",
       "url": "https://hstu.ac.bd/uploads/notice/2023/TrustyStipendList.pdf"
+    },
+    {
+      "title": "জানুয়ারী-জুন/২০২৪ খ্রিঃ সেমিস্টারে এম.এস./এম.এস.এস./এম.এ. কোর্সে ছাত্র-ছাত্রী ভর্তি বিজ্ঞপ্তি (সংশোধিত)",
+      "date": "30Nov 2023",
+      "department": "জানুয়ারী-জুন/২০২৪ খ্রিঃ সেমিস্টারে এম.এস./এম.এস.এস./এম.এ. কোর্সে ছাত্র-ছাত্রী ভর্তি বিজ্ঞপ্তি (সংশোধিত)",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/pgs/B S F.Notice.hstu_revised_2023.pdf"
     },
     {
       "title": "জানুয়ারী-জুন/২০২৪ খ্রিঃ সেমিস্টারে এম.এস./এম.এস.এস./এম.এ. কোর্সে ছাত্র-ছাত্রী ভর্তি বিজ্ঞপ্তি (সংশোধিত)",
@@ -11518,18 +11532,18 @@
       "url": "http://hstu.ac.bd/uploads/notice/2023/December_2023_Program.pdf"
     },
     {
-      "title": "বিজয়ের মাসকে ঘিরে হাবিপ্রবি কর্তৃক মাসব্যাপি বিভিন্ন কর্মসূচিসমূহ",
-      "date": "28Nov 2023",
-      "department": "এতদ্বারা এ বিশ্ববিদ্যালয়ের সকল শিক্ষার্থী, শিক্ষক, কর্মকর্তা ও কর্মচারীর অবগতি ও অংশগ্রহণের জন্য জানানো যাচ্ছে যে, স্বাধীনতার বিজয় দিবস উৎসবকে স্মরণীয় করে রাখতে হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় বিজয়ের মাসকে ঘিরে মাসব্যাপি বিভিন্ন কর্মসূচির আয়োজন করেছে। উক্ত কর্মসূচিসমুহে সংশ্লিষ্ট সকলকে অংশগ্রণের জন্য আহ্বান করা হলো ।",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2023/December_2023_Program.pdf"
-    },
-    {
       "title": "স্বাধীনতা ও বাংলাদেশ বিষয়াবলী সম্পর্কিত উপস্থিত বক্তৃতা প্রতিযোগিতা ২০২৩ এর আবেদন ফরম লিংক ও বিজ্ঞপ্তি",
       "date": "28Nov 2023",
       "department": "স্বাধীনতা ও বাংলাদেশ বিষয়াবলী সম্পর্কিত উপস্থিত বক্তৃতা প্রতিযোগিতা ২০২৩ এ আবেদনের লিংক ও বিজ্ঞপ্তিআবেদনের লিংকবিজ্ঞপ্তি",
       "category": "General",
       "url": ""
+    },
+    {
+      "title": "বিজয়ের মাসকে ঘিরে হাবিপ্রবি কর্তৃক মাসব্যাপি বিভিন্ন কর্মসূচিসমূহ",
+      "date": "28Nov 2023",
+      "department": "এতদ্বারা এ বিশ্ববিদ্যালয়ের সকল শিক্ষার্থী, শিক্ষক, কর্মকর্তা ও কর্মচারীর অবগতি ও অংশগ্রহণের জন্য জানানো যাচ্ছে যে, স্বাধীনতার বিজয় দিবস উৎসবকে স্মরণীয় করে রাখতে হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় বিজয়ের মাসকে ঘিরে মাসব্যাপি বিভিন্ন কর্মসূচির আয়োজন করেছে। উক্ত কর্মসূচিসমুহে সংশ্লিষ্ট সকলকে অংশগ্রণের জন্য আহ্বান করা হলো ।",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/notice/2023/December_2023_Program.pdf"
     },
     {
       "title": "B.Sc AG(Hons) Special Repeat Prac. 2021",
@@ -11721,11 +11735,11 @@
       "url": "https://hstu.ac.bd/uploads/notice/2023/iqac-training-19-11-23.pdf"
     },
     {
-      "title": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
+      "title": "১ম সুলতানা কামাল স্মৃতি কাপ আন্তঃ অনুষদীয় ভলিবল প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
       "date": "19Nov 2023",
-      "department": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
+      "department": "১ম সুলতানা কামাল স্মৃতি কাপ আন্তঃ অনুষদীয় ভলিবল প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2023/anual_sports_2023.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2023/Physica.hstu.notices-23_sultana_kamal.pdf"
     },
     {
       "title": "২য় বঙ্গমাতা ফজিলাতুননেছা মুজিব স্মৃতি কাপ আন্তঃ অনুষদীয় দাবা প্রতিযোগিতা ২০২৩ এর শুভ উদ্বোধন এবং  ফিক্সচার সংক্রান্ত বিজ্ঞপ্তি",
@@ -11735,11 +11749,11 @@
       "url": "https://hstu.ac.bd/uploads/notice/2023/Physica.hstu.notices-23_daba.pdf"
     },
     {
-      "title": "১ম সুলতানা কামাল স্মৃতি কাপ আন্তঃ অনুষদীয় ভলিবল প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
+      "title": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
       "date": "19Nov 2023",
-      "department": "১ম সুলতানা কামাল স্মৃতি কাপ আন্তঃ অনুষদীয় ভলিবল প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
+      "department": "২য় বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৩ সংক্রান্ত বিজ্ঞপ্তি",
       "category": "General",
-      "url": "https://hstu.ac.bd/uploads/notice/2023/Physica.hstu.notices-23_sultana_kamal.pdf"
+      "url": "https://hstu.ac.bd/uploads/notice/2023/anual_sports_2023.pdf"
     },
     {
       "title": "B.Sc in Mathmatics L4 S1 Routine 2022",
@@ -22319,11 +22333,11 @@
       "url": "https://drive.google.com/file/d/1qyTayVZ_MQo8Utm2My6hxXpVqtBl0CPo/view?usp=sharing"
     },
     {
-      "title": "B.Sc. Ag(Hons.) Special Repeat( Practical) Examination Schedule 2019",
+      "title": "BBA in Management examination Schedule 2020",
       "date": "26Aug 2021",
-      "department": "B.Sc. Ag(Hons.) Special Repeat( Practical) Examination Schedule 2019",
-      "category": "General",
-      "url": "https://hstu.ac.bd/uploads/online_exam/Special_repeat_Ag.pdf"
+      "department": "BBA in Management examination Schedule 2020",
+      "category": "BBA",
+      "url": "https://hstu.ac.bd/uploads/online_exam/BBA_Management.pdf"
     },
     {
       "title": "BBA in Accounting and Information Systems \n exam Schedule 2020",
@@ -22347,11 +22361,11 @@
       "url": "https://hstu.ac.bd/uploads/online_exam/BBA_Finance.pdf"
     },
     {
-      "title": "BBA in Management examination Schedule 2020",
+      "title": "B.Sc. Ag(Hons.) Special Repeat( Practical) Examination Schedule 2019",
       "date": "26Aug 2021",
-      "department": "BBA in Management examination Schedule 2020",
-      "category": "BBA",
-      "url": "https://hstu.ac.bd/uploads/online_exam/BBA_Management.pdf"
+      "department": "B.Sc. Ag(Hons.) Special Repeat( Practical) Examination Schedule 2019",
+      "category": "General",
+      "url": "https://hstu.ac.bd/uploads/online_exam/Special_repeat_Ag.pdf"
     },
     {
       "title": "Rescheduled Exam notice for MS in Soil Science (January-june) 2020",
