@@ -1,169 +1,58 @@
+import json
 import requests
 from bs4 import BeautifulSoup
-import json
-from datetime import datetime
 
-
-URL = "https://hstu.ac.bd/page/notice_all"
-
-headers = {
-    "User-Agent": "Mozilla/5.0"
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
-
-def get_category(text):
-    text = text.lower()
-
-    if "cse" in text or "computer" in text:
-        return "CSE"
-
-    if "sastc" in text:
-        return "SASTC"
-
-    if "bba" in text or "business" in text:
-        return "BBA"
-
-    if "agri" in text or "agriculture" in text:
-        return "Agriculture"
-
-    return "General"
-
-
-
-def scrape():
-
-    r = requests.get(
-        URL,
-        headers=headers,
-        timeout=30
-    )
-
-    print("Status:", r.status_code)
-
-    soup = BeautifulSoup(
-        r.text,
-        "lxml"
-    )
-
-
-    notices = []
-
-
-    items = soup.select(
-        "li.related_post_sec.single_post"
-    )
-
-
-    print("Found:", len(items))
-
-
-    for item in items:
-
-        title_tag = item.select_one(
-            "h5.note"
-        )
-
-        date_tag = item.select_one(
-            "span.date"
-        )
-
-        dept_tag = item.select_one(
-            "span.event-time"
-        )
-
-        link_tag = item.select_one(
-            "a.btn-success"
-        )
-
-
-        if not title_tag:
-            continue
-
-
-        title = title_tag.get_text(
-            strip=True
-        )
-
-
-        date = (
-            date_tag.get_text(strip=True)
-            if date_tag else ""
-        )
-
-
-        department = (
-            dept_tag.get_text(strip=True)
-            if dept_tag else ""
-        )
-
-
-        link = (
-            link_tag.get("href")
-            if link_tag else ""
-        )
-
-
-        if link and link.startswith("/"):
-            link = "https://hstu.ac.bd" + link
-
-
-        category = get_category(
-            title + " " + department
-        )
-
-
-        notices.append({
-
-            "title": title,
-
-            "date": date,
-
-            "department": department,
-
-            "category": category,
-
-            "url": link
-
-        })
-
-
-
-    data = {
-
-        "updated":
-
-        datetime.now().isoformat(),
-
-        "total":
-
-        len(notices),
-
-        "notices":
-
-        notices
-
-    }
-
-
-    with open(
-        "notices.json",
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
-
-
-    print(
-        "Saved notices.json"
-    )
-
-
-
-if __name__ == "__main__":
-    scrape()
+# Configured faculty notice endpoints
+SOURCES = [
+    {"category": "CSE", "url": "https://hstu.ac.bd/page/all_notice/type/f/id/2"},
+    {"category": "Agriculture", "url": "https://hstu.ac.bd/page/all_notice/type/f/id/4"},
+    {"category": "BBA", "url": "https://hstu.ac.bd/page/all_notice/type/f/id/3"}
+]
+
+def scrape_faculty_notices():
+    all_notices = []
+
+    for source in SOURCES:
+        category = source["category"]
+        url = source["url"]
+        
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=15)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'lxml')
+
+            # Parse table rows for notices
+            rows = soup.find_all('tr')
+            for row in rows:
+                a_tag = row.find('a', href=True)
+                cols = row.find_all('td')
+
+                if a_tag:
+                    title = a_tag.text.strip()
+                    link = a_tag['href']
+                    if not link.startswith('http'):
+                        link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
+
+                    date = cols[0].text.strip() if cols else "N/A"
+
+                    all_notices.append({
+                        "category": category,
+                        "title": title,
+                        "date": date,
+                        "link": link
+                    })
+        except Exception as e:
+            print(f"Error scraping {category} from {url}: {e}")
+
+    # Output merged notices to JSON
+    with open('notices.json', 'w', encoding='utf-8') as f:
+        json.dump(all_notices, f, ensure_ascii=False, indent=4)
+    
+    print(f"Successfully scraped {len(all_notices)} total faculty notices.")
+
+if __name__ == '__main__':
+    scrape_faculty_notices()
