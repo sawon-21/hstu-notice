@@ -3,7 +3,8 @@ name: Update HSTU Notices
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    # বাংলাদেশ সময় সকাল ৮:০০ টা থেকে বিকাল ৫:৩০ টা পর্যন্ত প্রতি ৩০ মিনিট পর পর রান হবে (UTC 02:00 - 11:30)
+    - cron: "*/30 2-11 * * *"
 
 permissions:
   contents: write
