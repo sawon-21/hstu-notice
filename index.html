@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSTU Notices</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f6f9; }
+        h1 { text-align: center; color: #003366; }
+        .nav { text-align: center; margin-bottom: 20px; }
+        .nav a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #003366; }
+        .filters { text-align: center; margin-bottom: 20px; }
+        .filter-btn { padding: 8px 16px; margin: 4px; border: none; background: #ddd; cursor: pointer; border-radius: 4px; }
+        .filter-btn.active { background: #003366; color: white; }
+        .notice-card { background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .notice-title { font-size: 16px; font-weight: bold; color: #222; text-decoration: none; }
+        .notice-title:hover { color: #0056b3; }
+        .notice-meta { font-size: 12px; color: #666; margin-top: 5px; }
+        .badge { display: inline-block; padding: 2px 8px; font-size: 11px; background: #e0e0e0; border-radius: 3px; margin-right: 8px; }
+    </style>
+</head>
+<body>
+
+    <h1>HSTU Notice Board</h1>
+    
+    <div class="nav">
+        <a href="index.html">Notices</a> | 
+        <a href="exam_result.html">Exam Results</a>
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">All</button>
+        <button class="filter-btn" onclick="filterCategory('cse', this)">CSE</button>
+        <button class="filter-btn" onclick="filterCategory('agriculture', this)">Agriculture</button>
+        <button class="filter-btn" onclick="filterCategory('bba', this)">BBA</button>
+    </div>
+
+    <div id="notice-container">Loading notices...</div>
+
+    <script>
+        let allNotices = [];
+
+        async function loadNotices() {
+            try {
+                const response = await fetch('notices.json');
+                allNotices = await response.json();
+                renderNotices(allNotices);
+            } catch (error) {
+                document.getElementById('notice-container').innerHTML = '<p>Error loading notices.</p>';
+            }
+        }
+
+        function renderNotices(notices) {
+            const container = document.getElementById('notice-container');
+            if (!notices || notices.length === 0) {
+                container.innerHTML = '<p>No notices available.</p>';
+                return;
+            }
+
+            container.innerHTML = notices.map(item => `
+                <div class="notice-card">
+                    <a class="notice-title" href="${item.link}" target="_blank">${item.title}</a>
+                    <div class="notice-meta">
+                        <span class="badge">${item.category || 'General'}</span>
+                        <span>Date: ${item.date}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCategory(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if (category === 'all') {
+                renderNotices(allNotices);
+            } else {
+                const filtered = allNotices.filter(n => 
+                    n.category && n.category.toLowerCase() === category.toLowerCase()
+                );
+                renderNotices(filtered);
+            }
+        }
+
+        loadNotices();
+    </script>
+</body>
+</html>
