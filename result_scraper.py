@@ -1,6 +1,6 @@
 import json
-import urllib3
 import requests
+import urllib3
 from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -28,15 +28,12 @@ def scrape_exam_results():
             a_tag = row.find('a', href=True)
             if a_tag:
                 title = a_tag.text.strip()
-                if not title:
+                if not title or len(title) < 3:
                     continue
 
                 link = a_tag['href']
                 if not link.startswith('http'):
-                    if link.startswith('/'):
-                        link = f"https://hstu.ac.bd{link}"
-                    else:
-                        link = f"https://hstu.ac.bd/{link}"
+                    link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
 
                 date = "N/A"
                 for col in cols:
@@ -55,7 +52,7 @@ def scrape_exam_results():
         with open('results.json', 'w', encoding='utf-8') as f:
             json.dump(results, f, ensure_ascii=False, indent=4)
 
-        print(f"Total exam results saved: {len(results)}")
+        print(f"Scraped {len(results)} exam results.")
 
     except Exception as e:
         print(f"Error scraping exam results: {e}")
