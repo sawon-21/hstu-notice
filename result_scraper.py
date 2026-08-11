@@ -2,23 +2,33 @@ import json
 import requests
 import urllib3
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Referer': 'https://hstu.ac.bd/'
-}
+def get_session():
+    session = requests.Session()
+    retry = Retry(connect=3, backoff_factor=1)
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    session.headers.update({
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Referer': 'https://hstu.ac.bd/'
+    })
+    return session
 
 EXAM_RESULT_URL = "https://hstu.ac.bd/page/exam_result"
 
 def scrape_exam_results():
+    session = get_session()
     results = []
 
     try:
-        response = requests.get(EXAM_RESULT_URL, headers=HEADERS, timeout=25, verify=False)
-        print(f"Fetching Exam Results: Status {response.status_code}")
+        response = session.get(EXAM_RESULT_URL, timeout=30, verify=False)
+        print(f"[Exam Results] Status: {response.status_code}")
 
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
@@ -35,7 +45,7 @@ def scrape_exam_results():
                     if not title or len(title) < 3:
                         continue
 
-                    link = a_tag['href']
+                    link = a_tag['href'].strip()
                     if not link.startswith('http'):
                         link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
 
@@ -56,13 +66,18 @@ def scrape_exam_results():
     except Exception as e:
         print(f"Error scraping exam results: {e}")
 
-    # SAFETY: Only overwrite JSON if new results were successfully found
-    if results:
+    # Remove duplicates
+    unique_results = []
+    seen_links = set()
+    for item in results:
+        if item['link'] not in seen_links:
+            seen_links.add(item['link'])
+            unique_results.append(item)
+
+    if unique_results:
         with open('results.json', 'w', encoding='utf-8') as f:
-            json.dump(results, f, ensure_ascii=False, indent=4)
-        print(f"Successfully saved {len(results)} results to results.json.")
-    else:
-        print("WARNING: Scraping returned 0 exam results. Keeping existing results.json.")
+            json.dump(unique_results, f, ensure_ascii=False, indent=4)
+        print(f"Successfully saved {len(unique_results)} exam results to results.json.")
 
 if __name__ == '__main__':
     scrape_exam_results()
