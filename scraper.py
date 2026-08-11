@@ -6,7 +6,9 @@ from bs4 import BeautifulSoup
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Referer': 'https://hstu.ac.bd/'
 }
 
 SOURCES = [
@@ -23,11 +25,15 @@ def scrape_faculty_notices():
         url = source["url"]
         
         try:
-            response = requests.get(url, headers=HEADERS, timeout=20, verify=False)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
+            response = requests.get(url, headers=HEADERS, timeout=25, verify=False)
+            print(f"Fetching {category}: Status {response.status_code}")
+            
+            if response.status_code != 200:
+                continue
 
+            soup = BeautifulSoup(response.text, 'html.parser')
             rows = soup.find_all('tr')
+            
             for row in rows:
                 cols = row.find_all('td')
                 if not cols:
@@ -58,12 +64,15 @@ def scrape_faculty_notices():
                     })
 
         except Exception as e:
-            print(f"Error scraping {category} from {url}: {e}")
+            print(f"Error scraping {category}: {e}")
 
-    with open('notices.json', 'w', encoding='utf-8') as f:
-        json.dump(all_notices, f, ensure_ascii=False, indent=4)
-
-    print(f"Scraped {len(all_notices)} faculty notices.")
+    # SAFETY: Only overwrite JSON if new notices were successfully found
+    if all_notices:
+        with open('notices.json', 'w', encoding='utf-8') as f:
+            json.dump(all_notices, f, ensure_ascii=False, indent=4)
+        print(f"Successfully saved {len(all_notices)} notices to notices.json.")
+    else:
+        print("WARNING: Scraping returned 0 items. Keeping existing notices.json.")
 
 if __name__ == '__main__':
     scrape_faculty_notices()
