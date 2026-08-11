@@ -22,6 +22,21 @@ def get_session():
 
 EXAM_RESULT_URL = "https://hstu.ac.bd/page/exam_result"
 
+def extract_pdf_link(session, page_url):
+    try:
+        res = session.get(page_url, timeout=15, verify=False)
+        if res.status_code == 200:
+            sub_soup = BeautifulSoup(res.text, 'html.parser')
+            for a in sub_soup.find_all('a', href=True):
+                href = a['href'].strip()
+                if '.pdf' in href.lower() or 'notice_file' in href.lower() or 'download' in href.lower() or '/files/' in href.lower():
+                    if not href.startswith('http'):
+                        href = f"https://hstu.ac.bd{'' if href.startswith('/') else '/'}{href}"
+                    return href
+    except Exception as e:
+        print(f"Error fetching direct PDF from {page_url}: {e}")
+    return page_url
+
 def scrape_exam_results():
     session = get_session()
     results = []
@@ -49,6 +64,8 @@ def scrape_exam_results():
                     if not link.startswith('http'):
                         link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
 
+                    direct_pdf_link = extract_pdf_link(session, link)
+
                     date = "N/A"
                     for col in cols:
                         text = col.text.strip()
@@ -60,13 +77,12 @@ def scrape_exam_results():
                         "category": "Exam Result",
                         "title": title,
                         "date": date,
-                        "link": link
+                        "link": direct_pdf_link
                     })
 
     except Exception as e:
         print(f"Error scraping exam results: {e}")
 
-    # Remove duplicates
     unique_results = []
     seen_links = set()
     for item in results:
@@ -77,7 +93,7 @@ def scrape_exam_results():
     if unique_results:
         with open('results.json', 'w', encoding='utf-8') as f:
             json.dump(unique_results, f, ensure_ascii=False, indent=4)
-        print(f"Successfully saved {len(unique_results)} exam results to results.json.")
+        print(f"Successfully saved {len(unique_results)} exam result PDFs to results.json.")
 
 if __name__ == '__main__':
     scrape_exam_results()
