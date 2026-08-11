@@ -3,7 +3,7 @@ name: Update HSTU Notices
 on:
   workflow_dispatch:
   schedule:
-    # বাংলাদেশ সময় সকাল ৮:০০ টা থেকে বিকাল ৫:৩০ টা পর্যন্ত প্রতি ৩০ মিনিট পর পর রান হবে (UTC 02:00 - 11:30)
+    # Runs every 30 mins between 02:00 UTC and 11:30 UTC (8:00 AM - 5:30 PM BST)
     - cron: "*/30 2-11 * * *"
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  update:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,31 +35,19 @@ jobs:
       - name: Run result scraper
         run: python result_scraper.py
 
-      - name: Commit updated files
+      - name: Commit updated files to Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add .
+          git add notices.json results.json
 
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No changes in JSON files"
           else
             git commit -m "Auto update notices and results"
             git push
           fi
-
-  deploy:
-    needs: update
-    runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
