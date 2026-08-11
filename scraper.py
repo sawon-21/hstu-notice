@@ -16,7 +16,6 @@ def get_session():
     session.headers.update({
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9',
         'Referer': 'https://hstu.ac.bd/'
     })
     return session
@@ -26,6 +25,23 @@ SOURCES = [
     {"category": "Agriculture", "url": "https://hstu.ac.bd/page/all_notice/type/f/id/4"},
     {"category": "BBA", "url": "https://hstu.ac.bd/page/all_notice/type/f/id/3"}
 ]
+
+def extract_pdf_link(session, page_url):
+    """নোটিশের ভেতরের পেইজে ঢুকে সরাসরি PDF লিংক খুঁজে বের করবে"""
+    try:
+        res = session.get(page_url, timeout=15, verify=False)
+        if res.status_code == 200:
+            sub_soup = BeautifulSoup(res.text, 'html.parser')
+            # আসল PDF ফাইল লিংক খোঁজা
+            for a in sub_soup.find_all('a', href=True):
+                href = a['href'].strip()
+                if '.pdf' in href.lower() or 'notice_file' in href.lower() or 'download' in href.lower() or '/files/' in href.lower():
+                    if not href.startswith('http'):
+                        href = f"https://hstu.ac.bd{'' if href.startswith('/') else '/'}{href}"
+                    return href
+    except Exception as e:
+        print(f"Error fetching direct PDF from {page_url}: {e}")
+    return page_url
 
 def scrape_faculty_notices():
     session = get_session()
@@ -42,7 +58,6 @@ def scrape_faculty_notices():
             if response.status_code == 200:
                 soup = BeautifulSoup(response.text, 'html.parser')
                 rows = soup.find_all('tr')
-                found_in_rows = False
                 
                 for row in rows:
                     cols = row.find_all('td')
@@ -59,6 +74,9 @@ def scrape_faculty_notices():
                         if not link.startswith('http'):
                             link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
                         
+                        # সরাসরি PDF লিংক বের করার জন্য দ্বিতীয় ধাপে কল
+                        direct_pdf_link = extract_pdf_link(session, link)
+                        
                         date = "N/A"
                         for col in cols:
                             text = col.text.strip()
@@ -70,29 +88,13 @@ def scrape_faculty_notices():
                             "category": category,
                             "title": title,
                             "date": date,
-                            "link": link
+                            "link": direct_pdf_link  # মূল PDF লিংক সেভ হবে
                         })
-                        found_in_rows = True
-
-                # Fallback extraction if table parsing returns no rows
-                if not found_in_rows:
-                    for a_tag in soup.find_all('a', href=True):
-                        title = a_tag.text.strip()
-                        link = a_tag['href'].strip()
-                        if len(title) > 5 and ('notice' in link.lower() or 'id' in link.lower() or 'file' in link.lower()):
-                            if not link.startswith('http'):
-                                link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
-                            all_notices.append({
-                                "category": category,
-                                "title": title,
-                                "date": "N/A",
-                                "link": link
-                            })
 
         except Exception as e:
             print(f"Error scraping {category} ({url}): {e}")
 
-    # Remove duplicates
+    # ডুপ্লিকেট নোটিশ বাদ দেওয়া
     unique_notices = []
     seen_links = set()
     for item in all_notices:
@@ -103,7 +105,7 @@ def scrape_faculty_notices():
     if unique_notices:
         with open('notices.json', 'w', encoding='utf-8') as f:
             json.dump(unique_notices, f, ensure_ascii=False, indent=4)
-        print(f"Successfully saved {len(unique_notices)} notices to notices.json.")
+        print(f"Successfully saved {len(unique_notices)} direct PDF notices.")
 
 if __name__ == '__main__':
     scrape_faculty_notices()
