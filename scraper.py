@@ -27,20 +27,41 @@ SOURCES = [
 ]
 
 def extract_pdf_link(session, page_url):
-    """নোটিশের ভেতরের পেইজে ঢুকে সরাসরি PDF লিংক খুঁজে বের করবে"""
+    """
+    নোটিশের মূল পেজে ঢুকে সরাসরি PDF ফাইল, Google Drive অথবা iframe-এর লিংক খুঁজে বের করে।
+    """
+    if page_url.lower().endswith('.pdf'):
+        return page_url
+
     try:
-        res = session.get(page_url, timeout=15, verify=False)
+        res = session.get(page_url, timeout=10, verify=False)
         if res.status_code == 200:
             sub_soup = BeautifulSoup(res.text, 'html.parser')
-            # আসল PDF ফাইল লিংক খোঁজা
+            
+            # ১. iframe, embed, object ট্যাগে PDF লিংক খোঁজা (HSTU এখানে PDF দেখায়)
+            for tag in sub_soup.find_all(['iframe', 'embed', 'object']):
+                src = tag.get('src') or tag.get('data') or ''
+                src = src.strip()
+                if src and any(k in src.lower() for k in ['.pdf', 'drive.google.com', 'notice_file', 'uploads', 'file']):
+                    if not src.startswith('http'):
+                        src = f"https://hstu.ac.bd{'' if src.startswith('/') else '/'}{src}"
+                    return src
+
+            # ২. <a> ট্যাগে সরাসরি PDF বা ডাউনলোড লিংক খোঁজা
             for a in sub_soup.find_all('a', href=True):
                 href = a['href'].strip()
-                if '.pdf' in href.lower() or 'notice_file' in href.lower() or 'download' in href.lower() or '/files/' in href.lower():
+                href_lower = href.lower()
+                text_lower = a.text.strip().lower()
+
+                if any(ext in href_lower for ext in ['.pdf', 'notice_file', 'uploads', 'drive.google.com']) or \
+                   any(kw in text_lower for kw in ['download', 'pdf', 'attachment', 'ডাউনলোড']):
                     if not href.startswith('http'):
                         href = f"https://hstu.ac.bd{'' if href.startswith('/') else '/'}{href}"
                     return href
+
     except Exception as e:
-        print(f"Error fetching direct PDF from {page_url}: {e}")
+        print(f"Error fetching PDF from {page_url}: {e}")
+
     return page_url
 
 def scrape_faculty_notices():
@@ -52,13 +73,14 @@ def scrape_faculty_notices():
         url = source["url"]
         
         try:
-            response = session.get(url, timeout=30, verify=False)
+            response = session.get(url, timeout=25, verify=False)
             print(f"[{category}] Status: {response.status_code}")
             
             if response.status_code == 200:
                 soup = BeautifulSoup(response.text, 'html.parser')
                 rows = soup.find_all('tr')
                 
+                count = 0
                 for row in rows:
                     cols = row.find_all('td')
                     if not cols:
@@ -74,8 +96,8 @@ def scrape_faculty_notices():
                         if not link.startswith('http'):
                             link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
                         
-                        # সরাসরি PDF লিংক বের করার জন্য দ্বিতীয় ধাপে কল
-                        direct_pdf_link = extract_pdf_link(session, link)
+                        # সরাসরি PDF এর আসল লিংক বের করা
+                        direct_link = extract_pdf_link(session, link)
                         
                         date = "N/A"
                         for col in cols:
@@ -88,13 +110,17 @@ def scrape_faculty_notices():
                             "category": category,
                             "title": title,
                             "date": date,
-                            "link": direct_pdf_link  # মূল PDF লিংক সেভ হবে
+                            "link": direct_link
                         })
+                        
+                        count += 1
+                        if count >= 15:  # দ্রুত কাজের জন্য সাম্প্রতিক ১৫টি নোটিশ নেওয়া হবে
+                            break
 
         except Exception as e:
             print(f"Error scraping {category} ({url}): {e}")
 
-    # ডুপ্লিকেট নোটিশ বাদ দেওয়া
+    # ডুপ্লিকেট বাদ দেওয়া
     unique_notices = []
     seen_links = set()
     for item in all_notices:
