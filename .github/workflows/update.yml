@@ -3,7 +3,6 @@ name: Update HSTU Notices
 on:
   workflow_dispatch:
   schedule:
-    # Runs every 30 mins between 02:00 UTC and 11:30 UTC (8:00 AM - 5:30 PM BST)
     - cron: "*/30 2-11 * * *"
 
 permissions:
@@ -35,7 +34,7 @@ jobs:
       - name: Run result scraper
         run: python result_scraper.py
 
-      - name: Commit updated files to Git
+      - name: Commit updated files
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,7 +42,7 @@ jobs:
           git add notices.json results.json
 
           if git diff --cached --quiet; then
-            echo "No changes in JSON files"
+            echo "No changes"
           else
             git commit -m "Auto update notices and results"
             git push
