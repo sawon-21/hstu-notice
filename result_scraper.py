@@ -23,18 +23,36 @@ def get_session():
 EXAM_RESULT_URL = "https://hstu.ac.bd/page/exam_result"
 
 def extract_pdf_link(session, page_url):
+    if page_url.lower().endswith('.pdf'):
+        return page_url
+
     try:
-        res = session.get(page_url, timeout=15, verify=False)
+        res = session.get(page_url, timeout=10, verify=False)
         if res.status_code == 200:
             sub_soup = BeautifulSoup(res.text, 'html.parser')
+            
+            for tag in sub_soup.find_all(['iframe', 'embed', 'object']):
+                src = tag.get('src') or tag.get('data') or ''
+                src = src.strip()
+                if src and any(k in src.lower() for k in ['.pdf', 'drive.google.com', 'notice_file', 'uploads', 'file']):
+                    if not src.startswith('http'):
+                        src = f"https://hstu.ac.bd{'' if src.startswith('/') else '/'}{src}"
+                    return src
+
             for a in sub_soup.find_all('a', href=True):
                 href = a['href'].strip()
-                if '.pdf' in href.lower() or 'notice_file' in href.lower() or 'download' in href.lower() or '/files/' in href.lower():
+                href_lower = href.lower()
+                text_lower = a.text.strip().lower()
+
+                if any(ext in href_lower for ext in ['.pdf', 'notice_file', 'uploads', 'drive.google.com']) or \
+                   any(kw in text_lower for kw in ['download', 'pdf', 'attachment', 'ডাউনলোড']):
                     if not href.startswith('http'):
                         href = f"https://hstu.ac.bd{'' if href.startswith('/') else '/'}{href}"
                     return href
+
     except Exception as e:
-        print(f"Error fetching direct PDF from {page_url}: {e}")
+        print(f"Error fetching PDF from {page_url}: {e}")
+
     return page_url
 
 def scrape_exam_results():
@@ -49,6 +67,7 @@ def scrape_exam_results():
             soup = BeautifulSoup(response.text, 'html.parser')
             rows = soup.find_all('tr')
             
+            count = 0
             for row in rows:
                 cols = row.find_all('td')
                 if not cols:
@@ -64,7 +83,7 @@ def scrape_exam_results():
                     if not link.startswith('http'):
                         link = f"https://hstu.ac.bd{'' if link.startswith('/') else '/'}{link}"
 
-                    direct_pdf_link = extract_pdf_link(session, link)
+                    direct_link = extract_pdf_link(session, link)
 
                     date = "N/A"
                     for col in cols:
@@ -77,8 +96,12 @@ def scrape_exam_results():
                         "category": "Exam Result",
                         "title": title,
                         "date": date,
-                        "link": direct_pdf_link
+                        "link": direct_link
                     })
+
+                    count += 1
+                    if count >= 15:
+                        break
 
     except Exception as e:
         print(f"Error scraping exam results: {e}")
@@ -93,7 +116,7 @@ def scrape_exam_results():
     if unique_results:
         with open('results.json', 'w', encoding='utf-8') as f:
             json.dump(unique_results, f, ensure_ascii=False, indent=4)
-        print(f"Successfully saved {len(unique_results)} exam result PDFs to results.json.")
+        print(f"Successfully saved {len(unique_results)} exam results to results.json.")
 
 if __name__ == '__main__':
     scrape_exam_results()
