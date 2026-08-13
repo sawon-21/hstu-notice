@@ -3,51 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HSTU Exam Results</title>
+    <title>HSTU Examination Results</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f6f9; }
-        h1 { text-align: center; color: #003366; }
-        .nav { text-align: center; margin-bottom: 20px; }
-        .nav a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #003366; }
-        .result-card { background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .result-title { font-size: 16px; font-weight: bold; color: #222; text-decoration: none; }
-        .result-title:hover { color: #0056b3; }
-        .result-meta { font-size: 12px; color: #666; margin-top: 5px; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background-color: #f4f6f9; color: #333; }
+        .header { text-align: center; margin-bottom: 25px; }
+        h1 { color: #003366; margin-bottom: 10px; }
+        .nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .nav a { text-decoration: none; font-weight: bold; color: #003366; padding: 6px 12px; border-radius: 4px; border: 1px solid #003366; }
+        .nav a.active { background-color: #003366; color: #fff; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .result-card { background: white; padding: 18px; margin-bottom: 12px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid #28a745; display: flex; flex-direction: column; gap: 8px; }
+        .result-title { font-size: 16px; font-weight: 600; color: #1a0dab; text-decoration: none; line-height: 1.4; }
+        .result-title:hover { text-decoration: underline; color: #0056b3; }
+        .result-meta { font-size: 13px; color: #666; display: flex; align-items: center; gap: 10px; }
+        .badge { padding: 3px 8px; font-size: 11px; font-weight: bold; background: #e2f0d9; color: #1e4620; border-radius: 4px; }
+        .empty-msg { text-align: center; padding: 40px; color: #777; font-size: 16px; }
     </style>
 </head>
 <body>
 
-    <h1>HSTU Examination Results</h1>
-    
-    <div class="nav">
-        <a href="index.html">Notices</a> | 
-        <a href="exam_result.html">Exam Results</a>
+    <div class="header">
+        <h1>HSTU Examination Results</h1>
+        <div class="nav">
+            <a href="index.html">Notices</a>
+            <a href="exam_result.html" class="active">Exam Results</a>
+        </div>
     </div>
 
-    <div id="result-container">Loading exam results...</div>
+    <div class="container" id="result-container">
+        <div class="empty-msg">Loading exam results...</div>
+    </div>
 
     <script>
         async function loadResults() {
             try {
-                const response = await fetch('results.json');
+                const response = await fetch('results.json?v=' + new Date().getTime());
                 const results = await response.json();
                 const container = document.getElementById('result-container');
 
                 if (!results || results.length === 0) {
-                    container.innerHTML = '<p>No exam results available.</p>';
+                    container.innerHTML = '<div class="empty-msg">No exam results available at this time.</div>';
                     return;
                 }
 
                 container.innerHTML = results.map(item => `
                     <div class="result-card">
-                        <a class="result-title" href="${item.link}" target="_blank">${item.title}</a>
+                        <a class="result-title" href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a>
                         <div class="result-meta">
+                            <span class="badge">Result</span>
                             <span>Date: ${item.date}</span>
                         </div>
                     </div>
                 `).join('');
             } catch (error) {
-                document.getElementById('result-container').innerHTML = '<p>Error loading exam results.</p>';
+                console.error("Error loading results:", error);
+                document.getElementById('result-container').innerHTML = '<div class="empty-msg">Unable to load exam results. Please try again later.</div>';
             }
         }
 
