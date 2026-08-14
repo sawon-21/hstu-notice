@@ -3,7 +3,9 @@ name: Update HSTU Notices
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    # Bangladesh Time (BST): Sun-Thu, 10:00 AM - 4:00 PM (every 30 mins)
+    # UTC Equivalent: Sun-Thu, 04:00 AM - 10:00 AM
+    - cron: "*/30 4-10 * * 0-4"
 
 permissions:
   contents: write
