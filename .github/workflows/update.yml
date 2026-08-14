@@ -3,7 +3,7 @@ name: Update HSTU Notices
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 2-11 * * *"
+    - cron: "*/30 * * * *"
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  build-and-deploy:
+  update:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,7 +39,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add notices.json results.json
+          git add .
 
           if git diff --cached --quiet; then
             echo "No changes"
@@ -47,6 +47,18 @@ jobs:
             git commit -m "Auto update notices and results"
             git push
           fi
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
